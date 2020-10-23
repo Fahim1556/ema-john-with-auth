@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './Shop.css';
+import fakeData from '../../fakeData';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
@@ -10,6 +11,7 @@ const Shop = () => {
     const first10 = fakeData.slice(0,10);
     const [products, setProducts] = useState(first10);
     const [cart, setCart] = useState([]);
+    document.title ="Shop mare";
     
     useEffect(()=>{
         const savedCart = getDatabaseCart();
